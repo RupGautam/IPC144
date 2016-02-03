@@ -1,7 +1,10 @@
-﻿// Code Quest
- // By: Rup Gautam
-
-/* Lab 1 IPC144 */
+﻿//
+//  main.c
+//  IPC Lab_1
+//
+//  Created by Rup Gautam on 2016-01-25.
+//  Copyright © 2016 Rup Gautam. All rights reserved.
+//
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
