@@ -13,41 +13,35 @@ int main(void)
 
 
 {
-    int strength;
-    int speed;
-    int defense;
-    int intel;
-    float sum;
-    float ratio_strength;
-    float ratio_speed;
-    float ratio_defense;
-    float ratio_intel;
+	int strength, speed, defense, intelligence;
+	float ratio_strength, ratio_speed, ratio_defense, ratio_intelligence;
+	float sum;
 
 
 // user inputs
 
-    printf("Strength:?\n");
+    printf("Strength:");
     scanf("%d", &strength);
 
-    printf("Speed:?\n");
+    printf("Speed:");
     scanf("%d", &speed);
 
-    printf("Defense:?\n");
+    printf("Defense:");
     scanf("%d", &defense);
 
-    printf("Intel:?\n");
-    scanf("%d", &intel);
+    printf("Intelligence:");
+    scanf("%d", &intelligence);
 
 
 // sum of all the attributes
-    sum = (strength + speed + defense + intel);
+    sum = (strength + speed + defense + intelligence);
 
 
 // dividing and multiply to get ratio
     ratio_strength = (strength / sum) * 100;
     ratio_speed = (speed / sum) * 100;
     ratio_defense = (defense / sum) * 100;
-    ratio_intel = ((intel / sum) * 100);
+    ratio_intelligence = ((intelligence / sum) * 100);
 
 
 
@@ -58,7 +52,7 @@ int main(void)
     printf("Strength: %d\n", (int)ratio_strength);
     printf("Speed: %d\n", (int)ratio_speed);
     printf("Defense: %d\n", (int)ratio_defense);
-    printf("Intelligence: %d\n", (int)ratio_intel);
+    printf("Intelligence: %d\n", (int)ratio_intelligence);
 
 
 
