@@ -34,7 +34,7 @@ int main(void)
 
 
 // sum of all the attributes
-    sum = (strength + speed + defense + intelligence);
+    sum = (int)(strength + speed + defense + intelligence);
 
 
 // dividing and multiply to get ratio
@@ -55,6 +55,9 @@ int main(void)
     printf("Intelligence: %d\n", (int)ratio_intelligence);
 
 
+	int remainder = (int)sum % 30;
+
+	printf("Luck: %d", remainder);
 
     return 0;
 
