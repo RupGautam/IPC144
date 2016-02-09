@@ -57,7 +57,7 @@ int main(void)
 		playerNewpower = ((float) playerHP/ enemyDefense);
 		// printf("%f", playerNewpower);
 
-		float newAttackpower 
+		float newAttackpower;
 	// new stats 
 		printf("Your HP:&playNewpower * 5 Enemy HP: &enemyHP - \n");
 
