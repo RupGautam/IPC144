@@ -29,8 +29,7 @@ int main(void)
 
 	// user selection 
 
-	int attack = 1;
-	int magic = 2;
+	int selector;
 
 	printf("Battle Start!\n");
 
@@ -44,24 +43,29 @@ int main(void)
 	// select move 1 or 2
 
 	printf("Select your move:");
-	scanf_s("%d %d", &attack, &magic);
+	scanf_s("%d", &selector);
 
 
 	// if option 1 
 
-	if (attack == 1) {
+	if (selector ==1) {
 		printf("You attacked the ememy!\n");
 		printf("The enemy attacked you!\n");
 
-		// int new power
 
-		//float playerNewpower;
-		//playerNewpower = (playerHP/ enemyDefense) * 5;
+		float playerNewpower;
+		playerNewpower = ((float) playerHP/ enemyDefense);
+		// printf("%f", playerNewpower);
 
-		int playerNewpower = playerStrength / enemyDefense;
+		float newAttackpower 
+	// new stats 
+		printf("Your HP:&playNewpower * 5 Enemy HP: &enemyHP - \n");
 
-		printf("%d", playerNewpower);
-	
+	}
+	else { 
+
+
+		printf("Magic\n");
 	}
 
 		
