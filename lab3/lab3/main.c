@@ -53,22 +53,39 @@ int main(void)
 		printf("The enemy attacked you!\n");
 
 
-		float playerNewpower;
-		playerNewpower = ((float) playerHP/ enemyDefense);
+		float attackPower;
+		attackPower = ((float) playerStrength/ enemyDefense);
 		// printf("%f", playerNewpower);
 
-		float newAttackpower;
-	// new stats 
-		printf("Your HP:&playNewpower * 5 Enemy HP: &enemyHP - \n");
 
-	}
-	else { 
+		// new stats 
+		float playernewAttackpower;
+		float enemynewAttackpower;
+
+		playernewAttackpower = (int)(attackPower * 5);
+		enemynewAttackpower = (int)(enemyHP - playernewAttackpower);
+
+		printf("Your HP:%.0f  Enemy HP:%.0f\n", playernewAttackpower, enemynewAttackpower);
 
 
-		printf("Magic\n");
-	}
+		//re loop again
+		printf("1 - Attack\n");
+		printf("2 - Magic\n");
 
+		//selector re
+		printf("Select your move:");
+		scanf_s("%d", &selector);
+
+		// if option 1 
+		if (selector == 1) {
+			printf("You attacked the ememy!\n");
+			printf("The enemy attacked you!\n");
+
+		}
+		else (playernewAttackpower == !1);
+			printf("You died!\n");
 		
+		}
 		return 0;
 
 }
