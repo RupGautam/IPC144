@@ -48,13 +48,13 @@ int main(void)
 
 	// if option 1 
 
-	if (selector ==1) {
+	if (selector == 1) {
 		printf("You attacked the ememy!\n");
 		printf("The enemy attacked you!\n");
 
 
 		float attackPower;
-		attackPower = ((float) playerStrength/ enemyDefense);
+		attackPower = ((float)playerStrength / enemyDefense);
 		// printf("%f", playerNewpower);
 
 
@@ -83,9 +83,49 @@ int main(void)
 
 		}
 		else (playernewAttackpower == !1);
-			printf("You died!\n");
+		printf("You died!\n");
+
+		// ------------------------------------------------------------------------------------------ //
+		//						              Second option	   										//
+		//---------------------------------------------------------------------------------------//
+			if (selector == 2);
+						printf("You shocked the ememy!\n");
+						printf("The enemy attacked you!\n");
 		
-		}
+		
+						float magicPower;
+						magicPower = ((float)playerIntelligence / enemyIntelligence);
+						// printf("%f", magicPower); #check if math is working properly
+		
+		
+						// new stats 
+						float playernewMagicpower;
+						float enemynewMagicpower;
+		
+						playernewMagicpower = (int)(magicPower * 5);
+						enemynewMagicpower = (int)(enemyHP - playernewMagicpower);
+
+		
+						printf("Your HP:%.0f  Enemy HP:%.0f\n", playernewMagicpower, enemynewMagicpower);
+						
+						//re loop again
+						printf("1 - Attack\n");
+						printf("2 - Magic\n");
+		
+						//selector re
+						printf("Select your move:");
+						scanf_s("%d", &selector);
+		
+						// re if option 2 
+						if (selector == 2) {
+							printf("You shocked the ememy!\n");
+		
+						}
+					//	else (playernewAttackpower == !0);
+						printf("You Won!\n");
+		
+	}
 		return 0;
 
+	
 }
