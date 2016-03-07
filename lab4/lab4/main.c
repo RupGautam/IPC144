@@ -1,8 +1,8 @@
 //
 //  main.c
-//  IPC Lab_2
+//  IPC Lab_4
 //
-//  Created by Rup Gautam on 2016-01-27.
+//  Created by Rup Gautam on 2016-03-07.
 //  Copyright @ 2016 Rup Gautam. All rights reserved.
 //
 
