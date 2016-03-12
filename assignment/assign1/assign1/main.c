@@ -24,8 +24,7 @@ int main(){
         menu();
         scanf("%d", &selector);
 
-        //This function will display "Invalid Input, Try Again" message when the 
-user input is invalid(i.e. selector <0 or selector>9)
+        //This function will display "Invalid Input, Try Again" message when the user input is invalid(i.e. selector <0 or selector>9)
         if (selector < low || selector>high)
         {
             printf("Invalid input, Try again\n\n");
@@ -34,13 +33,10 @@ user input is invalid(i.e. selector <0 or selector>9)
 
 
         else{
-            validate(); //This function will be called if input is valid.(i.e. 
-selector>=0, or selector <= 8)
+            validate(); //This function will be called if input is valid.(i.e. selector>=0, or selector <= 8)
             //exit = 1;
-            // I wasn't sure whether to display menu everytime or not, So I put it 
-as option to turn off menu.
-            //if exit = 0; menu is displayed always, not need to have exit = 0 
-here.
+            // I wasn't sure whether to display menu everytime or not, So I put it as option to turn off menu.
+            //if exit = 0; menu is displayed always, not need to have exit = 0 here.
             //if exit = 1; menu only diplays for invalid input.
         }
     } while(exit ==0);
@@ -50,8 +46,7 @@ here.
 
 void validate() {
     printf("Not Implemented!\n\n"); //print to warn user input Not Implemented.
-    // printf("Not Implemented!\n\n"); //Option to turn off warning, if user input 
-is within range of 1-8.
+    // printf("Not Implemented!\n\n"); //Option to turn off warning, if user input is within range of 1-8.
 
 }
 
