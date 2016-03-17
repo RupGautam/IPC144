@@ -1,4 +1,5 @@
-﻿// main.c
+﻿// File Info:
+// lab6 <main1.c>
 //
 // Author:
 // Rup Gautam <rupngautam@gmail.com>
@@ -21,93 +22,101 @@ float GetRandom(float low, float high);
 void clear();
 int validate(int low, int high);
 
-int main()
-{
-	int input;
-	    do{
+int main() {
+    int input;
+    do {
 
-			SeedRandom();
-			float randomNum;
+        SeedRandom();
+        float randNum;
 
-		        randomNum = GetRandom(0.15 , 0.50);
-			float strenghtRatio = randomNum;
+        randNum = GetRandom(0.15, 0.50);
+        float strenghtRatio = randNum;
 
-			randomNum = GetRandom(0.15 , 0.50);
-			float speedRatio = randomNum;
+        randNum = GetRandom(0.15, 0.50);
+        float speedRatio = randNum;
 
-			randomNum = GetRandom(0.15 , 0.50);
-			float defenceRatio = randomNum;
+        randNum = GetRandom(0.15, 0.50);
+        float defenceRatio = randNum;
 
-			randomNum = GetRandom(0.15 , 0.50);
-			float intelligenceRatio = randomNum;
+        randNum = GetRandom(0.15, 0.50);
+        float intelligenceRatio = randNum;
+            /* Above block generates random ratio values for: 
+         Strength, Speed, Defense & Intelligence
+         between 0.15-0.5 */
 
-		 	randomNum = GetRandom(0.5,2.0);
-                        float HPratio = randomNum;
-       
-			randomNum = GetRandom(3,20);
-		        float level = randomNum;
+        randNum = GetRandom(0.5, 2.0);
+        float HPratio = randNum;
 
-			strenghtRatio = truncf(strenghtRatio*level*level);
-		        speedRatio = truncf(speedRatio*level*level);
-			defenceRatio = truncf(defenceRatio*level*level);
-                        intelligenceRatio = truncf(intelligenceRatio*level*level);
-			HPratio = truncf(HPratio*level);
-			level = truncf(level);
+        randNum = GetRandom(3, 20);
+        float level = randNum;
 
-			printf("Level        - %d\n" , (int)level);
-		        printf("HP           - %d\n" , (int)HPratio);
-		        printf("Strenght     - %d\n" , (int)strenghtRatio);
-		        printf("Speed        - %d\n" , (int)speedRatio);
-			printf("Defence      - %d\n" , (int)defenceRatio);
-			printf("Intelligence - %d\n" , (int)intelligenceRatio);
-			printf("Generate Another?   ");
-			input = validate(1,2);
-		}while(input != 2);
+      	/* Above block generates random ratio values for: 
+         Health Power and Level between 0.5-2.0 */
+
+
+        strenghtRatio = truncf(strenghtRatio * level * level);
+        // math strength x twice level value 
+
+        speedRatio = truncf(speedRatio * level * level);
+        // math strength x twice level value
+
+        defenceRatio = truncf(defenceRatio * level * level);
+        // math strength x twice level value
+
+        intelligenceRatio = truncf(intelligenceRatio * level * level);
+        // math strength x twice level value
+
+        HPratio = truncf(HPratio * level);
+        level = truncf(level);
+
+        /* Above block generates random ratio values for: 
+         Health Power and Level between 0.5-2.0 */
+
+        printf("Level        - %d\n", (int) level);
+        printf("HP           - %d\n", (int) HPratio);
+        printf("Strenght     - %d\n", (int) strenghtRatio);
+        printf("Speed        - %d\n", (int) speedRatio);
+        printf("Defence      - %d\n", (int) defenceRatio);
+        printf("Intelligence - %d\n", (int) intelligenceRatio);
+        printf("Generate Another?   ");
+        input = validate(1, 2);
+    } while (input != 2);
 
 
 }
-void SeedRandom()
-{
+void SeedRandom() {
 
-	        srand(time(NULL));
+    srand(time(NULL));
 }
 
-float GetRandom(float low, float high)
-{
+float GetRandom(float low, float high) {
 
-	        float x = low + ((float) rand() / RAND_MAX * (high - low));
+    float x = low + ((float) rand() / RAND_MAX * (high - low));
 
 
-		        return x;
+    return x;
 
 }
 
 
-void clear()
-{
-	          while ( getchar() != '\n' );
+void clear() {
+    while (getchar() != '\n');
 }
 
-int validate(int low, int high)
-{
-		int number, goodResult;
-			do
-				{
-					scanf("%d", &number);
-					
-					if (number >= low && number <= high)
-						
-						{
-							goodResult = number;
-						}
-					
-					else
-						{
-							clear();
-							printf("Invalid input, try again:  ");
-						}
-				}	
-				while(goodResult != number);
-				return number;
-}
+int validate(int low, int high) {
+    int number, Result;
+    do {
+        scanf("%d", & number);
 
+        if (number >= low && number <= high)
+
+        {
+            Result = number;
+        } else {
+            clear();
+            printf("Invalid input, try again:  ");
+        }
+    }
+    while (Result != number);
+    return number;
+}
