@@ -19,11 +19,9 @@ void restAtInn(float* days, int* hp, int mHP);
 
 void train(float* days, int* hp, int *exp);
 
-void BattkeDl(int* hp);
+void BattleDl(int* hp);
 
 void mainMenu();
-
-void generating();
 
 int select;
 
@@ -35,13 +33,14 @@ int main(void){
 
 
 	int hp = 10;
-	int mhp = 10;
+	int mHP = 10;
 	int exp = 0; // init varibles to avoid garbage value 
 	float  days = 8.0f;
 	int low = 1;
 	int high = 4;
 	int exit = 0;
 	do{ 
+		printf("Days remaning: %lf : HP: %d : EXP: %d\n", days, hp, exp);
 		mainMenu();
 		scanf("%d", &select);
 
@@ -53,47 +52,48 @@ int main(void){
 		}
 
 
-		switch (select){
-		case 1:
-			restAtInn(&days, &hp, mhp);
-			// printf("Case1\n");
-			break;
+if (select == 1) {
+          restAtInn(&days, &hp, mHP);
+          hp = mHP;
+          days -= 1;
+        } else if (select == 2) {
+          train(&days, &hp, &exp);
+          hp -= 2;
+          days -= 0.5;
+          exp += 10;
+        } else if (select == 3) {
+          BattleDl(&hp);
+          hp = 0;
+        } else if (select == 4) {
+          printf("Exit !");
+        } else {
+        	exit = 0;
+        }
+        if (hp <= 0) {
+          printf("Game Over !\n\n");
+        }
+      } while (exit == 0);
 
-		case 2:
-			train(&days, &hp, &exp);
-			// printf("Case2\n");
-			break;
+      return 0;
+    }
 
-		case 3:
-			BattkeDl(&hp);
-			// printf("Case3\n");
-			break;
 
-		}
 
-	} while (exit == 0);
-	//printf("Good Bye!");
-	return 0;
+void restAtInn(){
+	printf("\nYou Rested at Inn");
+}
+void train(){
+	printf("\nYou did some tranning!\n\n");
+}
+void BattleDl(){
+	printf("\nHe's too strong\n\n");
 }
 
-
 void mainMenu(){
+		
 		printf("1 - Rest at Inn\n");
 		printf("2 - Train\n");
 		printf("3 - Fight the Demon Lord\n");
 		printf("4 - Quit Game\n\n");
 		printf("Select:  ");
-}
-
-void restAtInn(){
-	// math 
-	printf("\nYou rested up at the inn\n\n");
-}
-void train(){
-	// math 
-	printf("\nYou did some tranning!\n\n");
-}
-void BattkeDl(){
-	// math 
-	printf("\nHe's too strong\n\n");
 }
