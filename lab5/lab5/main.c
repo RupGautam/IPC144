@@ -38,17 +38,16 @@ int main(void){
 	float  days = 8.0f;
 	int low = 1;
 	int high = 4;
-	int exit = 0;
+	int exit;
 	do{ 
-		printf("Days remaning: %lf : HP: %d : EXP: %d\n", days, hp, exp);
+		printf("Days remaning: %.1lf : HP: %d : EXP: %d\n", days, hp, exp);
 		mainMenu();
 		scanf("%d", &select);
 
 
-		if (select < low || select > high)
+		if (select < low && select > high)
 		{
-			printf("\nInvalid input, try again:\n");
-			exit = 0;
+
 		}
 
 
@@ -67,7 +66,8 @@ if (select == 1) {
         } else if (select == 4) {
           printf("Exit !");
         } else {
-        	exit = 0;
+          printf("Invalid input, Try Again: \n");
+          exit = 0;
         }
         if (hp <= 0) {
           printf("Game Over !\n\n");
@@ -80,7 +80,7 @@ if (select == 1) {
 
 
 void restAtInn(){
-	printf("\nYou Rested at Inn");
+	printf("\nYou Rested at Inn\n\n");
 }
 void train(){
 	printf("\nYou did some tranning!\n\n");
