@@ -1,5 +1,5 @@
 ﻿// File Info:
-// lab6 <main1.c>
+// lab6 <main.c>
 //
 // Author:
 // Rup Gautam <rupngautam@gmail.com>
