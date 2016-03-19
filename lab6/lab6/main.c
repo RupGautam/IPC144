@@ -19,8 +19,8 @@
 
 void SeedRandom();
 float GetRandom(float low, float high);
-void clear();
 int validate(int low, int high);
+void clear();
 
 int main() {
     int input;
@@ -40,6 +40,7 @@ int main() {
 
         randNum = GetRandom(0.15, 0.50);
         float intelligenceRatio = randNum;
+
             /* Above block generates random ratio values for: 
          Strength, Speed, Defense & Intelligence
          between 0.15-0.5 */
@@ -78,7 +79,7 @@ int main() {
         printf("Speed        - %d\n", (int) speedRatio);
         printf("Defence      - %d\n", (int) defenceRatio);
         printf("Intelligence - %d\n", (int) intelligenceRatio);
-        printf("Generate Another?   ");
+        printf("Generate Another?  (1 - YES 2 - No) : ");
         input = validate(1, 2);
     } while (input != 2);
 
@@ -114,7 +115,7 @@ int validate(int low, int high) {
             Result = number;
         } else {
             clear();
-            printf("Invalid input, try again:  ");
+            printf("Invalid input, try again:  \n");
         }
     }
     while (Result != number);
