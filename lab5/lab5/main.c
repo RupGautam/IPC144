@@ -23,6 +23,10 @@ void BattleDl(int* hp);
 
 void mainMenu();
 
+int validate(int low, int high); 
+
+void exit_game();
+
 int select;
 
 
@@ -38,44 +42,68 @@ int main(void){
 	float  days = 8.0f;
 	int low = 1;
 	int high = 4;
-	int exit;
 	do{ 
 		printf("Days remaning: %.1lf : HP: %d : EXP: %d\n", days, hp, exp);
 		mainMenu();
-		scanf("%d", &select);
+		select = validate(1, 4);
+	
+		switch(select){
 
-
-		if (select < low && select > high)
-		{
-
-		}
-
-
-if (select == 1) {
-          restAtInn(&days, &hp, mHP);
+		case 1:
+		  restAtInn(&days, &hp, mHP);
           hp = mHP;
           days -= 1;
-        } else if (select == 2) {
+          break;
+
+        case 2: 
           train(&days, &hp, &exp);
           hp -= 2;
           days -= 0.5;
           exp += 10;
-        } else if (select == 3) {
+          break;
+
+        case 3: 
           BattleDl(&hp);
           hp = 0;
-        } else if (select == 4) {
-          printf("Exit !");
-        } else {
-          printf("Invalid input, Try Again: \n");
-          exit = 0;
-        }
-        if (hp <= 0) {
-          printf("Game Over !\n\n");
-        }
-      } while (exit == 0);
+          break;
 
-      return 0;
-    }
+        case 4:
+          exit_game(0);
+          break;
+          }
+
+        }while (select != 4);
+        printf("Good Bye!");
+
+       return 0;
+
+		}
+
+//if (select == 1) {
+//          restAtInn(&days, &hp, mHP);
+//          hp = mHP;
+//          days -= 1;
+//        } else if (select == 2) {
+//          train(&days, &hp, &exp);
+//          hp -= 2;
+//          days -= 0.5;
+//          exp += 10;
+//        } else if (select == 3) {
+//          BattleDl(&hp);
+//          hp = 0;
+//        } else if (select == 4) {
+//          printf("Exit !");
+//        } else {
+//          printf("Invalid input, Try Again: \n");
+//          exit = 0;
+//        }
+//        if (hp <= 0) {
+//          printf("Game Over !\n\n");
+//        }
+  //    } while (exit == 0);
+
+     // return 0;
+   // }
 
 
 
@@ -96,4 +124,22 @@ void mainMenu(){
 		printf("3 - Fight the Demon Lord\n");
 		printf("4 - Quit Game\n\n");
 		printf("Select:  ");
+}
+int validate(int low, int high) 
+{
+
+do {
+scanf("%d", &select);
+
+if(select < low || select > high)
+	printf("Invalid input, Try again: "); 
+// Invalid input, if input is less than low or bigger than high validate 
+}
+while (select < low || select > high);
+
+return select;
+
+}
+
+void exit_game(){
 }
