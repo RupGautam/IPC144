@@ -20,7 +20,7 @@
 void SeedRandom();
 float GetRandom(float low, float high);
 int validate(int low, int high);
-void clear();
+void ClearInputBuffer();
 
 int main() {
     int input;
@@ -85,22 +85,21 @@ int main() {
 
 
 }
-void SeedRandom() {
+void SeedRandom() 
+{
+srand(time(NULL)); //from lecture 9 week. 
 
-    srand(time(NULL));
 }
-
 float GetRandom(float low, float high) {
+float x = low + ((float) rand() / RAND_MAX * (high - low));
+// 
 
-    float x = low + ((float) rand() / RAND_MAX * (high - low));
-
-
-    return x;
+return x;
 
 }
 
 
-void clear() {
+void ClearInputBuffer() {
     while (getchar() != '\n');
 }
 
@@ -114,7 +113,7 @@ int validate(int low, int high) {
         {
             Result = number;
         } else {
-            clear();
+            ClearInputBuffer();
             printf("Invalid input, try again:  \n");
         }
     }
