@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 void validate();
+//int validate(const int low, const int high); Page 80
 void menu();
 int selector;
 
@@ -16,6 +17,7 @@ int main(){
 	int exit = 0;
 	const int low = 1;
 	const int high = 8;
+
 
 	do {
 		//Function is called to display menu
