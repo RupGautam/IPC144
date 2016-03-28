@@ -29,9 +29,9 @@
     <SourceDirectory>.</SourceDirectory>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="main.c" />
+    <None Include="main_1.c" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="main_1.c" />
+    <Compile Include="main.c" />
   </ItemGroup>
 </Project>

@@ -27,7 +27,7 @@ int main(){
 	int quantity[3] = {2,1,0}; //Now we have 2 Defense Booster, 1 Intelligence Booster and 0 Potion
 	
 	unsigned int i; //counter variable
-	int choice; //user choice variable
+	int selector; //user selector variable
 	int item; //user item
 	int exit = 0; //do-while flag for exiting
 	srand(time(NULL));
