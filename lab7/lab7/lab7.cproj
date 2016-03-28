@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{254DEE0E-ABCF-4EB4-8209-0B3FCBAF121D}</ProjectGuid>
     <Compiler>
-      <Compiler ctype="GccCompiler" xmlns="" />
+      <Compiler ctype="GccCompiler" />
     </Compiler>
     <Language>C</Language>
     <Target>Bin</Target>
@@ -30,5 +30,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="main_1.c" />
   </ItemGroup>
 </Project>
