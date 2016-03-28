@@ -170,7 +170,7 @@ void checkPrice(const int sku[],const float price[]){
 
 int validate(int low, int high) {
 
-int selector; //user option to select the main 
+int selector; //let user select for menu choice  
 
 do {
 scanf("%d", &selector);

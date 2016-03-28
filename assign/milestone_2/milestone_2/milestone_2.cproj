@@ -5,10 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BB147C9A-1A2A-4D6D-A248-146B171AE3E3}</ProjectGuid>
     <Compiler>
-      <Compiler ctype="GccCompiler" xmlns="" />
+      <Compiler ctype="GccCompiler" />
     </Compiler>
     <Language>C</Language>
     <Target>Bin</Target>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
