@@ -37,7 +37,7 @@ int main(int argc, char* argv[]) {
 	int item; //user item
 	int exit = 0; //do-while flag for exiting
 
-	time_t t; srand((unsigned) time(&t));
+	srand(time(NULL));
 
 	do { //main program cycle
 		printf("1. Get New Item\n2. Show Inventory\n3. Use Item\n4. Quit\n\nSelect Option: ");
@@ -91,6 +91,7 @@ void Print_Item(int item) {
 }
 
 int Find_Item(int id[],int size,int item) {
+// sample collected from IPC Book page 99
 	int i;
 	for ( i = 0; i < size; ++i ) {
 		if ( item == id[i] ) {
