@@ -16,8 +16,7 @@
 #include <stdlib.h>
 #define MAX_ITEMS 10
 
-struct Cart
-{
+struct Cart {
     int sku[MAX_ITEMS];
     float price[MAX_ITEMS];
     int quantity[MAX_ITEMS];
@@ -27,41 +26,29 @@ struct Cart
 
 void menu();
 void displayInventory(const int sku[],
-    const float price[]);
+const float price[]);
 int searchInventory(const int sku[],
-    const int item);
+const int item);
 void checkPrice(const int sku[],
-    const float price[]);
+const float price[]);
 void clear();
 
 void displayCart(const struct Cart * pShoppingCart);
 void addCart(struct Cart * pShoppingCart,
-    const int sku[],
-        const float
-    price[]);
+const int sku[],
+const float price[]);
 void removeCart(struct Cart * pShoppingCart);
 void checkout(struct Cart * pShoppingCart);
 int selector;
 int validate(int low, int high);
 
-int main()
-{
+int main() {
 
     struct Cart cart; //An object of Cart 
     cart.size = 0; //Number of items in myCart 
 
-    int sku[4] = {
-        2358,
-        7654,
-        1209,
-        1345
-    };
-    float price[4] = {
-        12.60,
-        34.99,
-        5.70,
-        12.50
-    };
+    int sku[4] = {2358, 7654, 1209, 1345};
+    float price[4] = {12.60, 34.99, 5.70, 12.50};
     const int low = 1;
     const int high = 8;
     int exit;
@@ -98,7 +85,7 @@ int main()
 
             case 6:
                 checkout( & cart);
-                printf("Total cost: %f\n\n", cart.totalCost);
+                printf("Total cost: %f\n\n", cart.totalCost); // Displaying total cost at checkout
                 break;
 
             case 7:
@@ -241,16 +228,14 @@ void displayCart(const struct Cart * pShoppingCart)
     printf("Inventory\n====================================\nSku\t\tQuantity\tPrice\n");
     for (i = 0; i < pShoppingCart -> size; ++i)
     {
-        printf("%d\t\t%d\t%f\n", pShoppingCart -> sku[i], pShoppingCart -> quantity[i], pShoppingCart -> price[i]);
+    printf("%d\t\t%d\t%f\n", pShoppingCart -> sku[i], pShoppingCart -> quantity[i], pShoppingCart -> price[i]);
     }
     printf("====================================\n\n");
-}
+    }
 
 void addCart(struct Cart * pShoppingCart,
     const int sku[],
-        const float
-    price[])
-{
+    const float price[]) {
     int current_sku;
     int quantity;
     int index;
@@ -266,13 +251,12 @@ void addCart(struct Cart * pShoppingCart,
         break;
     } while (1);
 
-    //User inputed correct sku, now we need quantity 
+    //If user inputs correct sku, than prompt the quantity 
     printf("Enter quantity: ");
     scanf("%d", & quantity);
 
     cart_index = searchInventory( & pShoppingCart -> sku[0], current_sku);
-    if (-1 == cart_index)
-    {
+    if (-1 == cart_index){
 
         /*if ( pShoppingCart->size == 4 ) { 
         printf("Card full!"); 
@@ -294,8 +278,7 @@ void addCart(struct Cart * pShoppingCart,
 
 void removeCart(struct Cart * pShoppingCart)
 {
-    if (0 == pShoppingCart -> size)
-    {
+    if (0 == pShoppingCart -> size) {
         printf("Cart is empty already!\n\n");
     }
     else
@@ -309,10 +292,10 @@ void checkout(struct Cart * pShoppingCart)
 {
     float returned_value = 0.0;
     int i;
-    for (i = 0; i < pShoppingCart -> size; ++i)
-    {
-        returned_value += pShoppingCart -> quantity[i] *
-            pShoppingCart -> price[i];
+    for (i = 0; i < pShoppingCart -> size; ++i) {
+    returned_value += pShoppingCart -> quantity[i] *
+    pShoppingCart -> price[i];
+
     }
     pShoppingCart -> totalCost = returned_value;
 }
