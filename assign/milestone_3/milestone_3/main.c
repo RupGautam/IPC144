@@ -19,15 +19,15 @@
 
 void menu();
 void displayInventory(); 
-int searchInventory(const int sku[], const int item);  
-void checkPrice(const int sku[],const float price[]);
-void clear();
+int searchInventory(const int sku[], const int item); 
+void checkPrice(const int sku[],const float price[]); 
+void clear(); 
 
-void displayCart();
-void addCart();
-void removeCart();
-void checkout();
-int selector;
+void displayCart(); 
+void addCart(); 
+void removeCart(); 
+void checkout(); 
+int selector; 
 int validate(int low, int high); 
 
 int main(){
@@ -84,7 +84,6 @@ int main(){
 			return 0;
 
 	}
-
 
 
 void menu() // printing Store menu

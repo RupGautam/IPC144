@@ -22,7 +22,6 @@ void displayInventory();
 int searchInventory(const int sku[], const int item);  
 void checkPrice(const int sku[],const float price[]);
 void clear();
-void checkPrice(); 
 
 void displayCart();
 void addCart();
