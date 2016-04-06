@@ -1,9 +1,19 @@
-﻿#include <stdio.h>
+﻿//
+// main.c
+//
+// Author:
+//       RupGautam <rngautam@myseneca.ca>
+//
+// Copyright (c) 2016 RupGautam
+//
+// I declare that the attached assig nment is wholly my own work in accordance with Seneca Academic Policy.
+// No part of this assignment has been copied manually or electronically from anyother source (including web sites)
+// or distributed to other students.
+// Name   Rup Gautam   Student ID  033838152
 
-int main (int argc, char *argv[])
-{
-	printf ("Hello world!\n");
-	
-	return 0;
+#include <stdio.h>
+
+int main(){
+
+	printf("Hello This is Lab_8");
 }
-
