@@ -17,21 +17,32 @@
 
 
 
-int main(){
+void main()
+{
 
-	char s[100];
-	int count = 0, i;
+	char str[100];
 
-	printf("Word Counter\n ===============\n\n");
-	printf("Text to be analyzed\n");
-	fgets(s, 100, stdin);
+	int wordcount = 0, i;
+
+	printf("Text to be analyzed: ");
+	fgets(str, 100, stdin);
 
 
-	for (i = 0; s[i] != '\0'; i++){
-		if (s[i] == ' ' && s[i + 1] != ' ');
-		count++;
+	for (i = 0; str[i] != '\0'; i++)
+	{
+
+
+		if (str[i] == ' ' && str[i + 1] != ' ')
+			wordcount++;
 	}
 
-	printf("Word count: %d\n", count + 1);
+
+	if (wordcount > 1){
+
+		printf(" Word counts: %d", wordcount + 1);
+	}
+	else{
+		printf("Please enter valid string");
+	}
 	return 0;
 }
