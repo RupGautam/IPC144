@@ -4,8 +4,9 @@
 //
 //  Created by Rup Gautam on 2016-03-07.
 //  Copyright @ 2016 Rup Gautam. All rights reserved.
+//  Code by :- Rup Gautam 
 //
-
+//
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
